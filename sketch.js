@@ -34,8 +34,8 @@ function setup() {
 	translate(width/2, height/2);
 
 	displayMiddleCardStack();
-	displayCurrentCards(0);
 	displayCardStacks();
+	displayCurrentCards(0);
 	displayOpposingCards();
 
 	pop();
@@ -47,6 +47,7 @@ function setup() {
 
 function mousePressed() {
 
+
 	push();
 	translate(width/2, height/2);
 
@@ -55,9 +56,13 @@ function mousePressed() {
 		background("#B798AF");
 
 		displayMiddleCardStack();
-		displayCurrentCards(narrativeIndex);
 		displayCardStacks();
-		displayOpposingCards();
+
+		if (cards.cards[narrativeIndex].response.one != "") {
+
+			displayCurrentCards(narrativeIndex);
+			displayOpposingCards();
+		}
 
 		narrativeIndex++;
 	}
