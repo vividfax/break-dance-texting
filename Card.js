@@ -12,6 +12,8 @@ class Card {
         }
         else {
             this.rotation = random(-5, 5);
+            this.x += random(-5, 5);
+            this.y += random(-5, 5);
         }
     }
 
