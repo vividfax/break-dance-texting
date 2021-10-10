@@ -51,7 +51,7 @@ function mousePressed() {
 	push();
 	translate(width/2, height/2);
 
-	if (mouseX > width/2 - 250 && mouseX < width/2 + 250 && mouseY > height-200) {
+	if (mouseX > width/2 - 250 && mouseX < width/2 + 250 && mouseY > height-200 && cards.cards[narrativeIndex-1].response.one != "") {
 
 		background("#B798AF");
 
